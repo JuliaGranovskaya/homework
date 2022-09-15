@@ -9,27 +9,8 @@ else:
 for x in 0, 1:
     for y in 0, 1:
         for z in 0, 1:
-            if x == 0 and y == 0:
-                a = 0
-            else:
-                a = 1
-            if a == 0 and z == 0:
-                b = 0
-            else:
-                b = 1
-            b = not b
-            if not x == 1 and not y == 1:
-                c = 1
-            else:
-                c = 0
-            if c == 1 and not z == 1:
-                d = 1
-            else:
-                d = 0
-            if b == d:
-                print('Истина')
-            else:
-                print('Ложь')
+            res = not(x or y or z) == (not(x) and not(y) and not(z))
+            print(x, y, z, res)
 
 #3 Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, 
 # в которой находится эта точка (или на какой оси она находится).
