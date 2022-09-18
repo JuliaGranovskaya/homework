@@ -48,64 +48,64 @@
 # data.close()
 
 # 5 Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл, содержащий сумму многочленов.
-f1 = open('file.txt', 'r')
-file1 = f1.readline()
-f2 = open('file1.txt', 'r')
-file2 = f2.readline()
+# f1 = open('file.txt', 'r')
+# file1 = f1.readline()
+# f2 = open('file1.txt', 'r')
+# file2 = f2.readline()
 
-def get_ones(line):
-    tmp = []
-    last = 0
-    positive = True
-    for i, item in enumerate(line):
-        if item in {'+', '-'}:
-            if positive:
-                tmp.append(line[last:i])
-            else:
-                tmp.append('-' + line[last:i])
-            last = i + 1
-            positive = item == '+'
-    if positive:
-        tmp.append(line[last:])
-    else:
-        tmp.append('-' + line[last:])
-    return tmp
+# def get_ones(line):
+#     tmp = []
+#     last = 0
+#     positive = True
+#     for i, item in enumerate(line):
+#         if item in {'+', '-'}:
+#             if positive:
+#                 tmp.append(line[last:i])
+#             else:
+#                 tmp.append('-' + line[last:i])
+#             last = i + 1
+#             positive = item == '+'
+#     if positive:
+#         tmp.append(line[last:])
+#     else:
+#         tmp.append('-' + line[last:])
+#     return tmp
 
-def get_coef(one):
-    for i, item in enumerate(one):
-        if item == 'x':
-            return int(one[:i]), one[i:]
-    return int(one), None
+# def get_coef(one):
+#     for i, item in enumerate(one):
+#         if item == 'x':
+#             return int(one[:i]), one[i:]
+#     return int(one), None
 
-def sum(d1,d2):
-    f = open('file3.txt', 'w')
-    lst = ''
-    keys1 = []
-    keys2 = []
-    for index in d1.keys():
-        keys1.append(index)
-    for ind in d2.keys():
-        keys2.append(ind)
-    for i in keys1:
-        for k in keys2:
-            if i == k:
-                lst = lst[:len(lst)] + ' + ' + str(d1[i] + d2[k]) + ' * ' + str(i)
-            # else:
-            #     lst = lst[:len(lst)] + ' + ' + str(d1[i]) + ' * ' + str(i)+ ' + ' + str(d1[i]) + ' * ' + str(i)
-    f.write(lst)
-    f.close()
-    return f
+# def sum(d1,d2):
+#     f = open('file3.txt', 'w')
+#     lst = ''
+#     keys1 = []
+#     keys2 = []
+#     for index in d1.keys():
+#         keys1.append(index)
+#     for ind in d2.keys():
+#         keys2.append(ind)
+#     for i in keys1:
+#         for k in keys2:
+#             if i == k:
+#                 lst = lst[:len(lst)] + ' + ' + str(d1[i] + d2[k]) + ' * ' + str(i)
+#             # else:
+#             #     lst = lst[:len(lst)] + ' + ' + str(d1[i]) + ' * ' + str(i)+ ' + ' + str(d1[i]) + ' * ' + str(i)
+#     f.write(lst)
+#     f.close()
+#     return f
 
-lst1 = get_ones(file1.replace(' ', '').replace('*', ''))
-lst2 = get_ones(file2.replace(' ', '').replace('*', ''))
+# lst1 = get_ones(file1.replace(' ', '').replace('*', ''))
+# lst2 = get_ones(file2.replace(' ', '').replace('*', ''))
 
-dct1 = {item[1]: item[0] for item in map(get_coef, lst1)}
-dct2 = {item[1]: item[0] for item in map(get_coef, lst2)}
+# dct1 = {item[1]: item[0] for item in map(get_coef, lst1)}
+# dct2 = {item[1]: item[0] for item in map(get_coef, lst2)}
 
-print(dct1)
-print(dct2)
+# print(dct1)
+# print(dct2)
 
-sum(dct1, dct2)
+# sum(dct1, dct2)
 
-f1.close()
-f2.close()
+# f1.close()
+# f2.close()
