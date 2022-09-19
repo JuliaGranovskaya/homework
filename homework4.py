@@ -29,11 +29,15 @@
 #         while k < len(a):
 #             if a[i] == a[k]:
 #                 s.append(a[i])
+#                 s.append(a[k])
 #             k += 1
 #         i += 1
 #         k = i + 1
-#     return s
-# print(repeat([1, 2, 2, 3, 4, 4, 6]))
+#     for e in range(len(s)):
+#         if s[e] in a[0: len(a) - 1]:
+#             a.remove(s[e])
+#     return a
+# print(repeat([1, 2, 3, 4, 2, 4, 6]))
 
 # 4 Задана натуральная степень k. Сформировать случайным образом список коэффициентов (значения от 0 до 100) многочлена и записать в файл многочлен степени k.
 # from random import randrange
