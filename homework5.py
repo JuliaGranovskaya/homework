@@ -31,7 +31,7 @@
 #     else:
 #         print('Введено некорретное значение')
 #         continue
-#     print(count)
+#     print(candy)
 # if count % 2 == 0:
 #     print('Выиграл второй игрок')
 # else:
@@ -60,6 +60,7 @@
 #         else:
 #             candy = candy - randint(1, 28)
 #     count +=1
+#    print(candy)
 # if count % 2 == 0:
 #     print('Выиграл бот')
 # else:
@@ -88,6 +89,7 @@
 #     else:
 #         candy = candy - (29 - a)
 #     count +=1
+#   print(candy)
 # if count % 2 == 0:
 #     print('Выиграл игрок')
 # else:
@@ -160,18 +162,17 @@
 #     line_fin = line_fin + str(count) + str(line[i])
 #     return line_fin
 # def recovery(line):
-#     count = 1
-#     line_fin = ''
-#     for e in range(len(line)-1):
-#         if line[e].isdigit():
-#             count = int(line[e])
-#         while count > 0:
-#             line_fin = line_fin + line[e + 1]
-#             count -= 1
-#         e +=2
-#     return line_fin
+#     number = ''
+#     res = ''
+#     for e in range(len(line)):
+#         if not line[e].isalpha():
+#             number += line[e]
+#         else:
+#             res = res + line[e] * int(number)
+#             number = ''
+#     return res
 # f = open('rlefile.txt', 'w')
-# f.write("aaaaagghhhffffffttt")
+# f.write("aaaaaaaaaaaaagghhhffffffttt")
 # f = open('rlefile.txt', 'r')
 # line = f.readline()
 # f = open('rlefile.txt', 'w')
