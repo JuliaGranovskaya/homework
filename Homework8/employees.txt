@@ -1,0 +1,5 @@
+id_, surname, name, telephone, position, salary, status
+2, Monro, Lora, 8908, logist, 66000, vacation
+3, Gomez, Mary, 4567, manager, 68000, office
+4, Ford, Bob, 8907, logist, 63000, office
+5, Pushkin, Alex, 8905, manager, 73000, vacation
